@@ -9,8 +9,8 @@ import android.graphics.Point;
 import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.os.Build;
-import androidx.core.view.GestureDetectorCompat;
-import androidx.core.view.MotionEventCompat;
+import android.support.v4.view.GestureDetectorCompat;
+import android.support.v4.view.MotionEventCompat;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -70,7 +70,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
-import static androidx.core.content.PermissionChecker.checkSelfPermission;
+import static android.support.v4.content.PermissionChecker.checkSelfPermission;
 
 public class AirMapView extends MapView implements GoogleMap.InfoWindowAdapter,
     GoogleMap.OnMarkerDragListener, OnMapReadyCallback, GoogleMap.OnPoiClickListener, GoogleMap.OnIndoorStateChangeListener {
@@ -95,7 +95,8 @@ public class AirMapView extends MapView implements GoogleMap.InfoWindowAdapter,
   private LatLngBounds cameraLastIdleBounds;
   private int cameraMoveReason = 0;
 
-  private static final String[] PERMISSIONS = new String[]{
+  private 
+      final String[] PERMISSIONS = new String[]{
       "android.permission.ACCESS_FINE_LOCATION", "android.permission.ACCESS_COARSE_LOCATION"};
 
   private final List<AirMapFeature> features = new ArrayList<>();
